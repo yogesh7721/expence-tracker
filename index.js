@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 app.use(logger)
 
+app.options("*", cors())
 app.use("/api/auth", require("./routes/auth.routes"))
 app.use("/api/account", require("./routes/account.Routes"))
 
